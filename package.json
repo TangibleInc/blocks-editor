@@ -1,0 +1,14 @@
+{
+  "name": "tangible-blocks-editor",
+  "title": "Tangible Blocks - Editor",
+  "productId": 22590,
+  "private": true,
+  "scripts": {
+    "dev": "roll dev",
+    "build": "roll build",
+    "format": "roll format"
+  },
+  "devDependencies": {
+    "@tangible/roller": "1.x"
+  }
+}
