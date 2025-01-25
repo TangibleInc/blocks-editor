@@ -3,16 +3,23 @@
  * Plugin Name: Tangible Blocks - Editor
  * Plugin URI: https://tangibleblocks.com/editor
  * Description: Create blocks for Gutenberg, Beaver, and Elementor
- * Version: 3.0.0
+ * Version: 3.1.0
+ * GitHub URI: TangibleInc/blocks-editor
  * Author: Team Tangible
  * Author URI: https://teamtangible.com
  * License: GPLv2 or later
  */
+use tangible\framework;
+use tangible\updater;
 
-define( 'TANGIBLE_BLOCKS_EDITOR_VERSION', '3.0.0' );
+define( 'TANGIBLE_BLOCKS_EDITOR_VERSION', '3.1.0' );
 
-require_once __DIR__ . '/vendor/tangible/plugin-framework/index.php';
-require_once __DIR__ . '/vendor/tangible/plugin-updater/index.php';
+$module_path = is_dir(
+  ($path = __DIR__ . '/../../tangible') // Module
+) ? $path : __DIR__ . '/vendor/tangible'; // Plugin
+
+require_once $module_path . '/framework/index.php';
+require_once $module_path . '/updater/index.php';
 
 /**
  * Get plugin instance
@@ -29,8 +36,7 @@ function tangible_block_editor() {
 
 add_action('plugins_loaded', function() {
 
-  $framework = tangible();
-  $plugin    = $framework->register_plugin([
+  $plugin    = framework\register_plugin([
     'name'           => 'tangible-blocks-editor',
     'title'          => 'Tangible Blocks - Editor',
     'setting_prefix' => 'tangible_blocks_editor',
@@ -46,7 +52,7 @@ add_action('plugins_loaded', function() {
     // 'multisite'      => false,
   ]);
 
-  $plugin->register_dependencies([
+  framework\register_plugin_dependencies($plugin, [
     'tangible-blocks/tangible-blocks.php' => [
       'title' => 'Tangible Blocks',
       'url' => 'https://tangibleblocks.com/',
@@ -58,13 +64,13 @@ add_action('plugins_loaded', function() {
 
   tangible_blocks_editor( $plugin );
 
-  tangible_plugin_updater()->register_plugin([
+  updater\register_plugin([
     'name' => $plugin->name,
     'file' => __FILE__,
     // 'license' => ''
   ]);
 
-  if (!$plugin->has_all_dependencies()) return;
+  if (!framework\has_all_plugin_dependencies($plugin)) return;
 
   // Features loaded will have $framework and $plugin in their scope
 

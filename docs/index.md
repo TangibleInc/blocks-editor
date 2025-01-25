@@ -6,13 +6,13 @@ When it's active, it enables the template editor (Template/Script/Style/Controls
 
 #### Source code
 
-https://bitbucket.org/tangibleinc/blocks-editor
+https://github.com/tangibleinc/blocks-editor
 
 
 ## Getting started
 
 ```sh
-git clone git@bitbucket.org:tangibleinc/blocks-editor.git
+git clone git@github.com:tangibleinc/blocks-editor.git
 cd blocks-editor
 npm install && composer install
 ```

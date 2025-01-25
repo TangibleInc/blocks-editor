@@ -2,16 +2,16 @@
   "repositories": [
     {
       "type": "vcs",
-      "url": "git@bitbucket.org:/tangibleinc/tangible-plugin-framework.git"
+      "url": "git@github.com:/tangibleinc/framework.git"
     },
     {
       "type": "vcs",
-      "url": "git@bitbucket.org:/tangibleinc/plugin-updater.git"
+      "url": "git@github.com:/tangibleinc/updater.git"
     }
   ],
   "require": {
-    "tangible/plugin-framework": "dev-variant/without-updater",
-    "tangible/plugin-updater": "dev-main"
+    "tangible/framework": "dev-main",
+    "tangible/updater": "dev-main"
   },
   "require-dev": {},
   "minimum-stability": "dev"

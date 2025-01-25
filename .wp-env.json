@@ -1,0 +1,10 @@
+{
+  "core": "WordPress/WordPress",
+  "phpVersion": "8.2",
+  "mappings": {
+    "wp-content/tangible": "./vendor/tangible",
+    "wp-content/plugins/tangible-blocks": "./vendor/tangible-dev/blocks",
+    "wp-content/plugins/tangible-e2e-plugin": "./vendor/tangible/framework/env/e2e-plugin",
+    "wp-content/themes/empty-block-theme": "./vendor/tangible/framework/empty-block-theme"
+  }
+}
