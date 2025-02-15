@@ -21,6 +21,10 @@ export default {
     exclude: [
       'assets/src',
       'docs',
+      '.git',
+      '**/artifacts',
+      '**/publish',
+      '**/node_modules',
       '**/tests',
       '**/*.scss',
       '**/*.jsx',
@@ -30,7 +34,7 @@ export default {
       'vendor/tangible/blocks',
       'vendor/tangible/fields',
       'vendor/tangible/template-system',
-      'vendor/tangible-dev/'
+      'vendor/tangible-dev/',
     ],
   },
   /**
