@@ -1,6 +1,7 @@
 {
   "core": "WordPress/WordPress",
   "phpVersion": "8.2",
+  "plugins": ["."],
   "mappings": {
     "wp-content/tangible": "./vendor/tangible",
     "wp-content/plugins/tangible-blocks": "./vendor/tangible-dev/blocks",

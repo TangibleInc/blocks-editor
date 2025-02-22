@@ -31,7 +31,6 @@ export default {
       '**/*.ts',
       '**/*.tsx',
       'vendor/tangible/*/vendor',
-      'vendor/tangible/blocks',
       'vendor/tangible/fields',
       'vendor/tangible/template-system',
       'vendor/tangible-dev/',
