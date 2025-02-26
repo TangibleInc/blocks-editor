@@ -19,9 +19,9 @@ Create blocks for Gutenberg, Beaver, and Elementor
 
 == Changelog ==
 
-= 3.1.0 =
+= 3.1.1 =
 
-Release Date: 2025-02-22
+Release Date: 2025-02-23
 
 - Improve compatibility with PHP 8.4
 - Improve dev/build/test setup and release pipeline
