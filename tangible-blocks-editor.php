@@ -3,7 +3,7 @@
  * Plugin Name: Tangible Blocks - Editor
  * Plugin URI: https://tangibleblocks.com/editor
  * Description: Create blocks for Gutenberg, Beaver, and Elementor
- * Version: 3.1.1
+ * Version: 3.1.2
  * GitHub URI: TangibleInc/blocks-editor
  * Author: Team Tangible
  * Author URI: https://teamtangible.com
@@ -12,7 +12,7 @@
 use tangible\framework;
 use tangible\updater;
 
-define( 'TANGIBLE_BLOCKS_EDITOR_VERSION', '3.1.1' );
+define( 'TANGIBLE_BLOCKS_EDITOR_VERSION', '3.1.2' );
 
 $module_path = is_dir(
   ($path = __DIR__ . '/../../tangible') // Module
